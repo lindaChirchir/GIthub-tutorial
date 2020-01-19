@@ -1,0 +1,21 @@
+public class Christmas {
+    static  String[] DAYS= {"first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth","tenth", "eleventh","twelveth"};
+
+   // static String firstline= int day;
+    //return "on the "+ DAYS[day]+ "day of christmas, my true love sent to me:" + ; //need fix this
+    static String[] GIFTS = {"a partridge in a pear tree","two turtle doves", "nice pair of shoe","beautiful dress","a car"};
+
+    static String allGifts(int day){
+        if(day==0){
+            return "on the "+ this.DAYS[0]+ "day of christmas, my true love sent to me:"+ this.GIFTS[0];
+        }
+        else{
+          return "on the "+ DAYS[day]+ "day of christmas, my true love sent to me:"
+            String.format("%s\n%s", GIFTS[day], allGifts(day - 1));
+        }
+    }
+    public static void main(String[] args){
+        String myFirstLine= "4";
+        System.out.print(allGifts(4));
+    }
+}
